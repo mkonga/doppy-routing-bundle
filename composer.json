@@ -1,0 +1,27 @@
+{
+    "name"       : "doppy/routing-bundle",
+    "type"       : "symfony-bundle",
+    "description": "Bundle with some simple useful tools for routing",
+    "keywords"   : [
+        "routing",
+        "symfony"
+    ],
+    "license"    : "MIT",
+    "authors"    : [
+        {
+            "name" : "Daan van den Berg",
+            "email": "zawadi@doppy.nl"
+        }
+    ],
+    "require"    : {
+        "php"                     : "^5.5",
+        "doppy/util-bundle"       : "^1.0.3",
+        "symfony-cmf/routing"     : "^1.4.0",
+        "symfony/framework-bundle": "^2.8.0|^3.0.0"
+    },
+    "autoload"   : {
+        "psr-4": {
+            "Doppy\\RoutingBundle\\": ""
+        }
+    }
+}
