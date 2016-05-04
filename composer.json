@@ -14,7 +14,7 @@
         }
     ],
     "require"    : {
-        "php"                     : "^5.5",
+        "php"                     : "^5.5|^7.0",
         "doppy/util-bundle"       : "^1.0.4",
         "symfony-cmf/routing"     : "^1.4.0",
         "symfony/framework-bundle": "^2.8.0|^3.0.0"
