@@ -1,7 +1,7 @@
 services:
     doppy_routing.router:
         class: Symfony\Cmf\Component\Routing\ChainRouter
-        arguguments:
+        arguments:
             - "@logger"
         tags:
           - { name: monolog.logger, channel: doppy_routing }
