@@ -23,12 +23,12 @@ class Configuration implements ConfigurationInterface
                     ->addDefaultsIfNotSet()
                     ->children()
                         ->arrayNode('routers_by_id')
-                            ->defaultValue(array('router.default' => 100))
                             ->useAttributeAsKey('id')
                             ->prototype('scalar')->end()
                         ->end()
                     ->end()
                 ->end()
+            ->scalarNode('default_router')->defaultValue(100)->end()
             ->end();
 
         return $treeBuilder;

@@ -26,9 +26,18 @@ class DoppyRoutingExtension extends Extension
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
 
+        // get router definition
         $router = $container->getDefinition('doppy_routing.router');
+
+        // add default router if configured
+        if ($config['default_router'] !== false) {
+            $router->addMethodCall('add', array(new Reference('router.default'), $config['default_router']));
+        }
+
+        // add manually configured routers
         foreach ($config['chain']['routers_by_id'] as $id => $priority) {
             $router->addMethodCall('add', array(new Reference($id), trim($priority)));
         }
+
     }
 }
