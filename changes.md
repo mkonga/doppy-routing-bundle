@@ -1,3 +1,8 @@
+# 2.0.1
+
+* Removed user specific files from .gitignore (causing the file to be completely removed)
+* Some code style fixes.
+
 # 2.0.0
 
 * The default router is no longer added using the chain key in the configuration anymore.
