@@ -1,3 +1,7 @@
+# 2.0.2
+
+* Add doppy/util-bundle version 2.0 is an allowed dependency, as it is compatible.
+
 # 2.0.1
 
 * Removed user specific files from .gitignore (causing the file to be completely removed)
