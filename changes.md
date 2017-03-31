@@ -1,3 +1,7 @@
+# 2.1.0
+
+* Removed dependency to doppy/util-bundle completely.
+
 # 2.0.2
 
 * Add doppy/util-bundle version 2.0 is an allowed dependency, as it is compatible.

@@ -27,8 +27,6 @@ This bundle only provides easy configuration and not actual code, as the Chain r
     }
 ````
 
-Note: composer will also install the bundle `doppy/util-bundle`. It is not required to add this to your AppKernel, only a couple of classes are used from this bundle and no actual bundle configuration.
-
 ### Write your own router
 
 Implement your own router in your own bundle somewhere. You will need to use one or more of the following interfaces:
