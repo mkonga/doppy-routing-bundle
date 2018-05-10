@@ -29,7 +29,7 @@ This bundle only provides easy configuration and not actual code, as the Chain r
 
 ### Write your own router
 
-Implement your own router in your own bundle somewhere. You will need to use one or more of the following interfaces:
+Implement your own router in your own app somewhere. You will need to use one or more of the following interfaces:
 
 * `Symfony\Component\Routing\Generator\UrlGeneratorInterface`  
 For generating url's only. Useful if you want to generate url's that go to a completely different site.
@@ -40,7 +40,7 @@ For more complex matching incoming url's to a controller.
 
 See the Symfony documentation (on those interfaces) for more information on generating and matching url's.
 
-Define this as a service as usual.
+Define this as a service as usual, or use autowiring.
 
 ### Add routers
 
@@ -56,7 +56,7 @@ Using the main configuration:
 doppy_routing:
     chain:
         routers_by_id:
-            your_bundle.routing.router: 200
+            App\Routing\Router: 200
 ````
 Where the number is the priority to use.
 
@@ -65,12 +65,14 @@ Where the number is the priority to use.
 ````
 services:
     your_bundle.routing.router:
-        class: Your\Bundle\Routing\Router
+        class: App\Routing\Router
         tags:
             - { name: doppy_routing.router, priority: 200 }
 ````
 
-Using this method you don't need to add the symfony router manually, as this is done automatically.
+Using this method you don't need to add the symfony router in the configuration, as this is done automatically by the tag.
+
+Autotag is not supported, 
 
 ### Default Symfony router
 
